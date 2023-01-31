@@ -10,6 +10,9 @@ Jika composer telah ter-install, ketik perintah dibawah ini :
 composer dump-autoload
 ```
 
+## Folder Logs
+Buat folder `logs` di root project, jika ada error akan ke generate file log di folder tersebut.
+
 ## Database
 Database yang ditunggukan yaitu MySQL, buat database dengan nama `tiket_test` atau sesuaikan dengan keinginan.
 
