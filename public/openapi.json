@@ -1,0 +1,108 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Ticket",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8000"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "basicAuth": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    }
+  },
+  "paths": {
+    "/check-ticket": {
+      "get": {
+        "tags": [
+          "default"
+        ],
+        "summary": "check ticket",
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "event_id",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "1"
+          },
+          {
+            "name": "ticket_code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "DTK9zKXCowpWx"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/update-ticket": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "update ticket",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "event_id": {
+                    "type": "integer",
+                    "description": "EventID",
+                    "example": "1"
+                  },
+                  "ticket_code": {
+                    "type": "string",
+                    "description": "Ticket Code : DTKxxxxxxxxx",
+                    "example": "DTK9zKXCowpWx"
+                  },
+                  "status": {
+                    "type": "string",
+                    "description": "claimed | available",
+                    "example": "claimed"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    }
+  }
+}

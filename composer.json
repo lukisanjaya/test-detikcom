@@ -1,0 +1,16 @@
+{
+    "name": "detikcom/tiket",
+    "description": "Test Detikcom",
+    "autoload": {
+        "psr-4": {
+            "Detikcom\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Luki Sanjaya",
+            "email": "ukykazuki@gmail.com"
+        }
+    ],
+    "require": {}
+}
