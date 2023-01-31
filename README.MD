@@ -14,7 +14,7 @@ composer dump-autoload
 Buat folder `logs` di root project, jika ada error akan ke generate file log di folder tersebut.
 
 ## Database
-Database yang ditunggukan yaitu MySQL, buat database dengan nama `tiket_test` atau sesuaikan dengan keinginan.
+Database yang digunakan yaitu MySQL, buat database dengan nama `tiket_test` atau sesuaikan dengan keinginan.
 
 Setelah membuat database konfigurasi pengaturan database di `src/Config/DB.php`
 
